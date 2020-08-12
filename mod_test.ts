@@ -1,14 +1,28 @@
-import { assertEquals } from "https://deno.land/std@0.64.0/testing/asserts.ts";
+import {
+  assertEquals,
+  assert,
+} from "https://deno.land/std@0.64.0/testing/asserts.ts";
 
-import starter from "./mod.ts";
+import {
+  isValid,
+  getAllDomains,
+  getDomainInfo,
+} from "./mod.ts";
 
-Deno.test("test starter function", (): void => {
-  assertEquals(starter("abc"), "abc");
+Deno.test("isValid", (): void => {
+  assert(isValid(".com"));
 });
 
-Deno.test({
-  name: "test starter function",
-  fn(): void {
-    assertEquals(starter("foo bar"), "foo bar");
-  },
+Deno.test("getAllDomains should return an array", (): void => {
+  assert(Array.isArray(getAllDomains()));
+});
+
+Deno.test("getDomainInfo", (): void => {
+  assertEquals(getDomainInfo(".zzzzz"), null);
+  assertEquals(getDomainInfo(".com"), {
+    name: ".com",
+    xn: ".com",
+    type: "generic",
+    manager: "VeriSign Global Registry Services",
+  });
 });
