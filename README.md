@@ -4,7 +4,8 @@
 [![Build Status](https://github.com/justjavac/deno_domain/workflows/ci/badge.svg?branch=master)](https://github.com/justjavac/deno_domain/actions)
 [![license](https://img.shields.io/github/license/justjavac/deno_domain)](https://github.com/justjavac/deno_domain/blob/master/LICENSE)
 
-Get all the [top-level domains](https://www.iana.org/domains/root/db), including gTLDs such as `.com`, and country-code TLDs such as `.uk`.
+Get all the [top-level domains](https://www.iana.org/domains/root/db), including
+gTLDs such as `.com`, and country-code TLDs such as `.uk`.
 
 ## Usage
 
@@ -13,7 +14,7 @@ All domain code:
 ```ts
 import domains from "https://deno.land/x/domain/domains.ts";
 
-console.log(domains)
+console.log(domains);
 ```
 
 output:
@@ -63,4 +64,5 @@ getdomainInfo(".zzzz");
 
 ### License
 
-[deno_domain](https://github.com/justjavac/deno_domain) is released under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
+[deno_domain](https://github.com/justjavac/deno_domain) is released under the
+MIT License. See the bundled [LICENSE](./LICENSE) file for details.

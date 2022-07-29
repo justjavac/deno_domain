@@ -1,13 +1,9 @@
 import {
-  assertEquals,
   assert,
+  assertEquals,
 } from "https://deno.land/std@0.64.0/testing/asserts.ts";
 
-import {
-  isValid,
-  getAllDomains,
-  getDomainInfo,
-} from "./mod.ts";
+import { getAllDomains, getDomainInfo, isValid } from "./mod.ts";
 
 Deno.test("isValid", (): void => {
   assert(isValid(".com"));
