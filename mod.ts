@@ -30,7 +30,7 @@ export function getAllDomains(): string[] {
 }
 
 export function getDomainInfo(domain: string): DomainInfo | null {
-  for (let x of domains) {
+  for (const x of domains) {
     if (x[0] === domain) {
       return {
         name: x[0],
